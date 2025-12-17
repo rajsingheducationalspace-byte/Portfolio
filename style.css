@@ -1,12 +1,18 @@
+/* Global reset */
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     color: white;
 }
 
-.navbar {
-    background-color: grey;
-    width: 100%;
-    background: transparent
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/background.jpg);
+    overflow-x: hidden;
 }
+
+/* ================= NAVBAR ================= */
 
 .navbar {
     width: 100%;
@@ -23,7 +29,6 @@
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: white;
 }
 
 /* Menu */
@@ -31,13 +36,10 @@
     display: flex;
     gap: 25px;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-links li a {
     text-decoration: none;
-    color: white;
     font-size: 16px;
 }
 
@@ -45,39 +47,15 @@
     color: lightslategrey;
 }
 
-
-.navbar li a:hover {
-    color: lightslategrey;
-
-}
-
-.navbar li a {
-    padding: 13px 3px;
-    text-decoration: none;
-    color: white;
-}
-
-.logo {
-    float: left;
-    font-size: 24px;
-    color: white;
-    margin: 10px 1px;
-}
-
-.body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(images/background.jpg);
-}
+/* ================= INTRO SECTION ================= */
 
 .intro {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     margin: 60px 80px;
     padding: 40px;
-    border-style: solid;
+    border: 1px solid white;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -91,13 +69,8 @@
 }
 
 .introtext h2 {
-    margin: 15px 0px;
+    margin: 15px 0;
     font-size: 32px;
-}
-
-.introtext h2:hover {
-    transition: magnify 1.3s ease-in-out;
-    transform: scale(1.05);
 }
 
 .introtext p {
@@ -107,30 +80,25 @@
 
 .introimage img {
     width: 250px;
-    height: auto;
-    border-radius: 4%;
+    border-radius: 6%;
     border: 3px solid white;
 }
 
-.introimage img:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
-}
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
-    /* Navbar mobile */
     .nav-container {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
     }
 
     .nav-links {
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 
-    /* Intro section mobile */
     .intro {
         flex-direction: column;
         text-align: center;
@@ -143,7 +111,7 @@
     }
 
     .introimage img {
-        width: 200px;
+        width: 180px;
         margin-top: 20px;
     }
 }
