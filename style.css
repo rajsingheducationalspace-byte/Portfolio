@@ -82,6 +82,11 @@ body {
 }
 
 
+.about-us-body{
+   background-image: url(images/background.jpg);
+}
+
+
 @media (max-width: 768px) {
 
     .nav-container {
